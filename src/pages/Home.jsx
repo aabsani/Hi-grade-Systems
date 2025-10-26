@@ -16,7 +16,7 @@ function Home() {
     <>
       {/* main section on homepage */}
       <section className={styles.home}>
-        <div className="home-overlay">
+        <div className={styles.homeoverlay}>
           <h1>Welcome to Hi-Grade Systems Ltd</h1>
           <p>
             Your one-stop destination for graded quality real estate

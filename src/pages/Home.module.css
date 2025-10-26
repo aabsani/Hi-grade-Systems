@@ -9,6 +9,18 @@
   font-size: 3rem;
 }
 
+.homeoverlay {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 6rem;
+  padding: 2rem;
+  gap: 1rem;
+  z-index: 2;
+}
+
 .homeslider {
   position: absolute;
   top: 0;
