@@ -1,6 +1,25 @@
 .home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .home h1 {
   font-size: 3rem;
+}
+
+.homeslider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+
+.homeslider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
