@@ -1,29 +1,48 @@
 import styles from "./Navbar.module.css";
 
 import React from "react";
+import { useState, useEffect } from "react";
+
 import { FaFacebookF, FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
+  // handle navbar scrolling state
+  const [scrolled, setScrolled] = useState(false);
+
+  // useEffect for listening to scrolling event, to change navbar appearance
+  useEffect(() => {
+    const handleScroll = () => {
+      // if user scrolls more than 50px vertically, scrolled becomes true
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className={styles.navbar}>
+    <nav
+      className={`${styles.navbar} ${scrolled ? styles.navbarScrolled : ""}`}
+    >
       <NavLink to="/">
-        <img src="/images/logo-1.jpeg" alt="logo" className="logo" />
+        <img src="/images/logo-1.jpeg" alt="logo" className={styles.logo} />
       </NavLink>
 
       <ul>
         <li>
-          <NavLink to="/" className="nav-item">
+          <NavLink to="/" className={styles.navItem}>
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink to="/about" className="nav-item">
+          <NavLink to="/about" className={styles.navItem}>
             About Us
           </NavLink>
         </li>
         <li>
-          <NavLink to="/services" className="nav-item">
+          <NavLink to="/services" className={styles.navItem}>
             Services
           </NavLink>
         </li>
@@ -33,7 +52,7 @@ function Navbar() {
           </NavLink>
         </li> */}
         <li>
-          <NavLink to="/contact" className="nav-item">
+          <NavLink to="/contact" className={styles.navItem}>
             Contact Us
           </NavLink>
         </li>
