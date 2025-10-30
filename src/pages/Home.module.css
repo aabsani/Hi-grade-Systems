@@ -9,18 +9,7 @@
   font-size: 3rem;
 }
 
-.homeoverlay {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 6rem;
-  padding: 2rem;
-  gap: 1rem;
-  z-index: 2;
-}
-
+/* styling for Swiper */
 .homeslider {
   position: absolute;
   top: 0;
@@ -34,4 +23,17 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* styling for elements above the Swiper element */
+.homeoverlay {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 6rem;
+  padding: 2rem;
+  gap: 1rem;
+  z-index: 2;
 }
