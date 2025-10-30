@@ -16,22 +16,6 @@ function Home() {
     <>
       {/* main section on homepage */}
       <section className={styles.home}>
-        <div className={styles.homeoverlay}>
-          <h1>Welcome to Hi-Grade Systems Ltd</h1>
-          <p>
-            Your one-stop destination for graded quality real estate
-            construction & fiscal management consultancy.
-          </p>
-          <Link to="/about">
-            <button className="btn-home">
-              <div className="home-about">About Us</div>
-              <div>
-                <FaArrowRight />
-              </div>
-            </button>
-          </Link>
-        </div>
-
         {/* carousel slider */}
         <Swiper
           spaceBetween={30}
@@ -49,6 +33,23 @@ function Home() {
             <img src="/images/background-cover.jpg" alt="Slide 2" />
           </SwiperSlide>
         </Swiper>
+
+        {/* overlay content */}
+        <div className={styles.homeoverlay}>
+          <h1>Welcome to Hi-Grade Systems Ltd</h1>
+          <p>
+            Your one-stop destination for graded quality real estate
+            construction & fiscal management consultancy.
+          </p>
+          <Link to="/about">
+            <button className="btn-home">
+              <div className="home-about">About Us</div>
+              <div>
+                <FaArrowRight />
+              </div>
+            </button>
+          </Link>
+        </div>
       </section>
     </>
   );
