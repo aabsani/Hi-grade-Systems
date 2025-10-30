@@ -23,7 +23,7 @@
 }
 
 /* Navbar's NavLink elements */
-.nav-item {
+.navItem {
   position: relative;
   padding-bottom: 1.5rem;
   color: inherit;
@@ -32,7 +32,7 @@
 }
 
 /* Hover underline effect */
-.nav-item::after {
+.navItem::after {
   content: "";
   position: absolute;
   left: 0; /* anchor the line to the left of container */
@@ -67,7 +67,7 @@
 }
 
 .navbar a {
-  color: #c92a2a;
+  color: var(--color-brand--1);
   font-size: 20px;
 }
 
