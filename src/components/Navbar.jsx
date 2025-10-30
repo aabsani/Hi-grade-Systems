@@ -27,7 +27,7 @@ function Navbar() {
       className={`${styles.navbar} ${scrolled ? styles.navbarScrolled : ""}`}
     >
       <NavLink to="/">
-        <img src="/images/logo-1.jpeg" alt="logo" className={styles.logo} />
+        <img src="/images/logo.png" alt="logo" className={styles.logo} />
       </NavLink>
 
       <ul>
