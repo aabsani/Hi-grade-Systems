@@ -13,3 +13,69 @@
   z-index: 10;
   transition: background-color 0.3s ease-in;
 }
+
+/* styling for navbar appearance when page is scrolled down */
+.navbarScrolled {
+  background-color: #000;
+  color: #fff;
+  padding: 0.2rem 1rem;
+  position: fixed;
+}
+
+/* Navbar's NavLink elements */
+.nav-item {
+  position: relative;
+  padding-bottom: 1.5rem;
+  color: inherit;
+  text-decoration: none;
+  /* transition: color 0.3s ease; */
+}
+
+/* Hover underline effect */
+.nav-item::after {
+  content: "";
+  position: absolute;
+  left: 0; /* anchor the line to the left of container */
+  bottom: 0; /* anchor the line to the bottom of container */
+  height: 3px;
+  width: 0%;
+  background-color: red; /* underline color */
+  transition: width 0.5s ease;
+}
+
+/* Hover animation */
+.navItem:hover::after {
+  width: 100%;
+}
+
+/* Active tab underline stays visible */
+.navItem.active::after {
+  width: 100%;
+}
+
+.logo {
+  height: 5rem;
+  width: 5rem;
+  border: none;
+  border-radius: 50px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.navbar a {
+  color: #c92a2a;
+  font-size: 20px;
+}
+
+.navbar-scrolled a {
+  color: #ffff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
